@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+}
+
+.title {
+  font-family: sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.gallery {
+  height: 90%;
+}
+
+.gallery ul {
+  display: flex;
+  width: 100%;
+  height: 95%;
+}
+
+.gallery ul li {
+  margin: 0 1%;
+  flex-grow: 1;
+  flex-basis: 0;
+  transition: flex-basis 0.5s;
+  cursor: pointer;
+}
+
+.gallery ul li.active {
+  flex-basis: 50%;
+}
+
+.gallery ul li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery ul li:hover {
+  flex-basis: 50%;
+}
+
+.gallery:hover .active {
+  flex-basis: 0;
+}
+
+.gallery ul li:first-child:hover {
+  flex-basis: 50%;
+}
